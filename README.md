@@ -2,8 +2,6 @@
 
 ## URL
 
-[https://k.azma.work/](https://k.azma.work/)
-
 ## ファイル構成
 
 いじる必要があるのは以下のファイルです。
