@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Sound Sphere</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+  <div class="page page-active" id="page-landing">
+    <img id="topTitle" src="assets/title.png">
+    <div class="button-group">
+      <div class="button-group2">
+        <button id="fileselectbtn" class="btn-gradation">ファイル選択</button>
+        <input type="text" id="filename" value="" readonly hidden>
+        <button id="startbtn" class="btn-gradation">作成</button>
+      </div>
+      <button id="tempStartbtn" class="btn-gradation2">とりあえず試す</button>
+    </div>
+    <div>
+      <div id="loading" hidden>読み込み中…</div>
+      <input type="file" id="files" accept="audio/*" style="display: none;" hidden>
+    </div>
+    <div id="description">
+      <h2>Sound Sphere とは？</h2>
+      <p>好きな音楽を視覚的に楽しむことができるツールです。</p>
+      <p>楽曲の周波数や音量といった情報を反映して球が振動します。</p>
+      <p>ボタン切替や手拍子によるユーザー入力で色や形を変化させることも可能です。</p>
+    </div>
+  </div>
+  <div class="page" id="page-main">
+    <div class="container">
+      <div id="sketch"></div>
+      <div class="titleText">Sound Sphere</div>
+
+  <div class="buttonsWrapper">
+      <div class="controll-interactionbuttons">
+      <button id="interaction-button1">背景色<font color=#ff5050><br>[A]</font></button>
+      <button id="interaction-button2">モノクロ<font color=#ff5050><br>[S]</font></button>
+      <button id="interaction-button3">形状変化<font color=#ff5050><br>[D]</font></button>
+      <button id="interaction-button4">球の追加<font color=#ff5050><br>[N]</font></button>
+        </div>
+      </div>
+
+        <div class="buttonsWrapper">
+            <div class="controll-elsebuttons">
+            <button id="else-button1">オートモード<font color=#ff5050><br>[Z]</font></button>
+            </div>
+        </div>
+
+      <div class="controll">
+        <div class="controll-buttons">
+          <button id="play-button" class="material-icons" data-play="play_arrow" data-pause="pause">play_arrow</button>
+        </div>
+        <div class="controll-seekbars">
+          <div id="time-current"></div>
+          <input id="seekbar" class="seekbar" type="range" min="0" step="0.001">
+          <div id="time-duration"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="p5.js"></script>
+  <script src="p5.sound.js"></script>
+
+  <script src="event.js"></script>
+  <script src="landing.js"></script>
+  <script src="page.js"></script>
+  <script src="sketch.js"></script>
+  <script src="ui.js"></script>
+</body>
+
+</html>
